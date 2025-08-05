@@ -1,4 +1,4 @@
-# CustomerOrderSystem
+#1 CustomerOrderSystem
 The Customer Order System (COS) provides the customer with the following services described as use cases: Log On, Log Off, Create Account, Select Items, Make Order, and View Order. The COS is made possible by one main file and 16 files apart of the project1.COS package. 
 
 The COS is separated into two sessions a logged out session where any user can use the system and a logged in session where only users logged into a known account can use. This is made possible by the PreSessionManager.java (PSM) and PostSessionManager.java (PoSM) files respectively. 
