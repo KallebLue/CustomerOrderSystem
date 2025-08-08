@@ -54,3 +54,7 @@ Option 4: View Past Orders:
 Option 5: Log Out:
 
   In the case the user inputs 5, the LogOff class is called, and the user is informed that they have been successfully logged out. The application then returns to    the initial logged-out welcome screen.
+
+  # ChangeLog
+
+  
