@@ -107,6 +107,31 @@ Click " Log Out". A "Logged Out" alert confirms that you have been logged out. Y
 
 CustomerOrderSystemGUI.java, CartView.java, CheckoutView.java, CreateAccountView.java, LoginView.java, MerchandiseView,java, OrderViewerView, and SessionManagerView are created and added to create a GUI interface as a alternative to using the console as the user interface.
 
-<h3></h3>
+<h3>OrderCreator.java</h3>
 
+Variable MAIL_DELIVERY_FEE is changed from private to public in order to be used by CheckoutView.java.
+
+<h3>BankSimulator.java</h3>
+
+The BankSimulator.java no longer uses a simplistic random approval/denial based on null returns. It now provides specific reasons for transaction denials, improving realism and user feedback.
+
+<h3>Ordercreator.java</h3>
+
+Adapted to ChargeResult: The processOrder method now calls BankSimulator.chargeCard() and receives a ChargeResult object. It checks result.isApproved() to determine transaction success and retrieves the authorizationNumber via result.getAuthorizationNumber() if approved. If a transaction is denied, the console output now includes the specific denialReason from the ChargeResult (e.g., "Bank charge denied: Insufficient funds or general bank error.").
+
+<h3>MerchSelect.java</h3>
+
+Improved Quantity Input Handling:The selectMerchandise method has been enhanced to more gracefully handle invalid input when a user enters the quantity of merchandise.
+
+Previously, entering non-numeric values or quantities less than or equal to zero would result in an error message and immediately prompt for a new merchandise ID.
+
+Now, if invalid input (non-numeric, zero, or negative) is detected for the quantity, the system will display a specific error message and re-prompt the user for the quantity for the same item until valid input is provided. This ensures a smoother and more focused user experience during merchandise selection.
+
+<h3>Cart.java</h3>
+
+Removed Duplicate Console Output for Item Additions: The addItem method in Cart.java no longer prints a confirmation message to the console when an item is added. This led to a duplicate confirmation message being sent when adding items to the cart.
+
+<h3>CustomerOrderSystemUML.drawio</h3>
+
+Completly reworked to showcase the above changes and inclusion of the GUI files. 
 
