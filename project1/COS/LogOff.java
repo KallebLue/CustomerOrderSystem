@@ -5,7 +5,7 @@ package project1.COS;
  * It is designed to be called by other classes, such as SessionManager,
  * to perform the logoff action.
  */
-public class LogOff { // Renamed class from LogOut to LogOff
+public class LogOff { 
 
     /**
      * Performs the customer logoff action.
