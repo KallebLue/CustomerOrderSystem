@@ -12,7 +12,7 @@ public class LogOff {
      * In a more complex system, this method might also handle
      * session invalidation, clearing user data from memory, etc.
      */
-    public static void performLogoff() { // Renamed method from performLogout to performLogoff
+    public static void performLogoff() { 
         System.out.println("Logging out...");
         System.out.println("You have been successfully logged out.");
         // In a real application, this might involve more complex actions
